@@ -1,11 +1,12 @@
 <li>
-  <%= form_for(:flight, url: new_flight_path, :method => :get)  do |f| %>
+  <%= form_for(:flight, url: new_booking_path, :method => :get)  do |f| %>
     <p>Departure date: <%= flight.departure_date.strftime("%d %B, %Y") %></p>
     <p>From : <%= flight.from_airport.code %> (<%= flight.from_airport.full_name %>)</p>
     <p>To : <%= flight.to_airport.code %> (<%= flight.to_airport.full_name %>)</p>
-    <%= radio_button_tag(:flight_choice, "Flight choice") %>
-    <%= label_tag(:flight_choice, "Choose that flight") %>
+    <%= radio_button_tag(:flight_id, flight.id) %>
+    <%= label_tag(:flight_id, "Choose that flight") %>
     <%= hidden_field_tag(:passengers, @passengers_number) %>
+    <%= f.submit "Booking" %>
     <p>------------------------------------------------------</p>
   <% end %>
 </li>

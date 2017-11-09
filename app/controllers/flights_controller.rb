@@ -9,6 +9,7 @@ class FlightsController < ApplicationController
 
 
   def index
+    @flight = Flight.new
     @from_code = Airport.all.map { |f| [f.code, f.id] }
     @to_code = Airport.all.map { |f| [f.code, f.id] }
     @passengers = [[1], [2], [3], [4]]
