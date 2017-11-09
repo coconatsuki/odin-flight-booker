@@ -1,0 +1,9 @@
+<%= form_for(:flights, url: flights_path, :method => :get) do |f| %>
+  <p>FROM: <%= select_tag :from_id, options_for_select(@from_code) %>
+  TO: <%= select_tag :to_id, options_for_select(@to_code) %></p>
+  <p>PASSENGERS: <%= select_tag :passengers, options_for_select(@passengers) %></p>
+
+  <p>AVAILABLE FLIGHTS DATE: <%= select_tag :date, options_for_select(@date) %></p>
+
+  <%= f.submit "Search" %>
+<% end %>

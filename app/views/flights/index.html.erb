@@ -1,0 +1,12 @@
+<h1>Available flights</h1>
+
+<%= render 'search_form' %>
+
+<% if @flights && !@flights.empty? %>
+  <ul>
+    <% @flights.each do |flight| %>
+
+      <%= render flight %>
+    <% end %>
+  </ul>
+<% end %>
