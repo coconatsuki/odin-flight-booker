@@ -14,8 +14,6 @@ gem "better_errors"
 gem "binding_of_caller"
 gem 'faker'
 
-gem 'sqlite3'
-# Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -44,6 +42,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -56,6 +55,10 @@ group :development do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem "letter_opener"
+end
+
+group :production do
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
