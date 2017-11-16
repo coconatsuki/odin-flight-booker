@@ -1,24 +1,8 @@
-# README
+# odin-flight-booker
+Project in Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is part of the online formation "The Odin Project".
 
-Things you may want to cover:
+Follow the link for instructions : https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms?ref=lnav
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The main goal of this 'flight-booker' exercise is to practice using complex forms in Rails.
