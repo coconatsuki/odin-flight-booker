@@ -1,0 +1,17 @@
+Booking confirmation
+========================================
+
+Dear <%= @user.name %>,
+
+Thank you for booking a flight with us!
+
+Here's your booking information:
+
+Departure date: <%= @last_booking.departure_date.strftime("%d %B, %Y") %>
+From : <%= @last_booking.from_airport.code %> (<%= @last_booking.from_airport.full_name %>)
+To : <%= @last_booking.to_airport.code %> (<%= @last_booking.to_airport.full_name %>)
+
+------------------------
+Have a good flight with our company !
+
+Odin Flight's team

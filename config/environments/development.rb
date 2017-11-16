@@ -28,7 +28,16 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
-
+  # To fake delivery with :mail trap
+  config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  :user_name => 'e6a146eecf9e43',
+  :password => '83b17d3578e83b',
+  :address => 'smtp.mailtrap.io',
+  :domain => 'smtp.mailtrap.io',
+  :port => '2525',
+  :authentication => :cram_md5
+}
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.

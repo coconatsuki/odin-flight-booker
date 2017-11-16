@@ -1,4 +1,32 @@
-<h1>Booking</h1>
+<h1>Booking for the flight:</h1>
 
-<%= @flight %>
-<%= @passengers %>
+<p>FROM : <strong><%= @from %> (<%= @from_code %>)</strong></p>
+<p>TO : <strong><%= @to %> (<%= @to_code %>)</strong></p>
+<p>ON THE : <strong><%= @flight.departure_date.strftime("%d %B %Y") %></strong></p>
+<p>FOR : <strong><%= @passengers_count %> passengers</strong></p>
+
+<%= form_for(@booking) do |f| %>
+  <%= hidden_field_tag(:flight, @flight.id) %>
+  Passengers informations :
+  <ul>
+    <%= f.fields_for :users do |users_form| %>
+      <li>
+        <%= users_form.label :name %>
+        <%= users_form.text_field :name %>
+
+        <%= users_form.label :email %>
+        <%= users_form.text_field :email %>
+
+        <%= users_form.label :gender, "female" %>
+        <%= users_form.radio_button :gender,"female" %>
+        <%= users_form.label :gender, "male" %>
+        <%= users_form.radio_button :gender, "male" %>
+
+        <%= users_form.label :passport %>
+        <%= users_form.text_field :passport %>
+      </li>
+    <% end %>
+    <%= f.submit "BOOK FLIGHT" %>
+  </ul>
+
+<% end %>

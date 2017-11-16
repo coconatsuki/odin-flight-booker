@@ -1,4 +1,3 @@
 class User < ApplicationRecord
-  has_many :bookings
-  has_many :flights, through: :bookings
+  has_and_belongs_to_many :bookings
 end

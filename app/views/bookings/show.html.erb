@@ -1,0 +1,15 @@
+<h1>Booking confirmation: </h1>
+
+<p>Booking number: <%= @booking.id %></p>
+
+<p>--------------------------------------------------------------</p>
+
+<h3>Your flight's information: </h3>
+
+<%= render 'flight', object: @flight %>
+
+<h3>Passengers: </h3>
+
+<ul>
+    <%= render @passengers %>
+</ul>

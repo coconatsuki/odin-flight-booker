@@ -3,10 +3,5 @@
 <%= render 'search_form' %>
 
 <% if @flights && !@flights.empty? %>
-  <ul>
-    <% @flights.each do |flight| %>
-
-      <%= render flight %>
-    <% end %>
-  </ul>
+      <%= render @flights %>
 <% end %>

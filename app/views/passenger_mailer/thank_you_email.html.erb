@@ -1,0 +1,20 @@
+<h1>Booking confirmation</h1>
+
+<p>Dear <%= @user.name %>,</p>
+
+<h4>Thank you for booking a flight with us !</h4>
+
+<p>Here's your booking information:</p>
+
+<p>Departure date: <%= @last_booking.departure_date.strftime("%d %B, %Y") %></p>
+<p>From : <%= @last_booking.from_airport.code %> (<%= @last_booking.from_airport.full_name %>)</p>
+<p>To : <%= @last_booking.to_airport.code %> (<%= @last_booking.to_airport.full_name %>)</p>
+
+
+<p>
+  Have a good flight with our company !
+</p>
+
+<p>
+  <strong>Odin Flight's team</strong>
+</p>
