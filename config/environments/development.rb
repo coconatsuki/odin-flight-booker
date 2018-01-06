@@ -31,8 +31,8 @@ Rails.application.configure do
   # To fake delivery with :mail trap
   config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
-  :user_name => 'e6a146eecf9e43',
-  :password => '83b17d3578e83b',
+  :user_name => ENV['mail_trap_username'],
+  :password => ENV['mail_trap_password'],
   :address => 'smtp.mailtrap.io',
   :domain => 'smtp.mailtrap.io',
   :port => '2525',

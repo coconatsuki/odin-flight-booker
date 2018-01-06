@@ -80,6 +80,17 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
+  # To fake delivery with :mail trap
+  config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  :user_name => ENV['mail_trap_username'],
+  :password =>  ENV['mail_trap_password'],
+  :address => 'smtp.mailtrap.io',
+  :domain => 'smtp.mailtrap.io',
+  :port => '2525',
+  :authentication => :cram_md5
+}
+
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
