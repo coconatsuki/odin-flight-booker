@@ -13,6 +13,8 @@ gem 'rails', '~> 5.1.4'
 gem "better_errors"
 gem "binding_of_caller"
 gem 'faker'
+gem 'stripe'
+gem 'figaro'
 
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

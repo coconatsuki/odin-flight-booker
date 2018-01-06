@@ -2,6 +2,15 @@
 
 <p>Booking number: <%= @booking.id %></p>
 
+<p>
+  Payment status:
+  <% if @booking.payed %>
+    payed
+  <% else %>
+    to be payed
+  <% end %>
+</p>
+
 <p>--------------------------------------------------------------</p>
 
 <h3>Your flight's information: </h3>
@@ -13,3 +22,5 @@
 <ul>
     <%= render @passengers %>
 </ul>
+
+<%= link_to "<-- book an other flight", root_path %>

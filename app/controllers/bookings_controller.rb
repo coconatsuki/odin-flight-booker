@@ -16,11 +16,8 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.flight = Flight.find(params[:flight])
     if @booking.save
-      @users = @booking.users
-      @users.each do |user|
-        PassengerMailer.thank_you_email(user).deliver_now!
-      end
-      redirect_to @booking
+      session[:booking_id] = @booking.id
+      redirect_to new_charge_path
     else
       flash[:warning] = "You made a mistake. Try again."
       render 'new'

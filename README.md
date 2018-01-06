@@ -13,4 +13,6 @@ The main goal of this 'flight-booker' exercise is to practice advanced forms (dr
 
 - Then, he could enter all the passengers information in an other form.
 
+- Finally, the user can enter the billing information. This was made possible with the 'Stripe' gem.
+
 I also had to set up complex associations, so that I could get all the departing or arriving flights of an airport, and the origin and destination of each flight.
