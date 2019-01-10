@@ -3,6 +3,8 @@ Project in Rails
 
 This project is part of the online formation "The Odin Project".
 
+If you want to try it, this is the HEROKU link (it might take some time to load) => https://odin-flight-booking.herokuapp.com/
+
 Follow the link for instructions : https://www.theodinproject.com/courses/ruby-on-rails/lessons/building-advanced-forms?ref=lnav
 
 The main goal of this 'flight-booker' exercise is to practice advanced forms (dropdown menus, radio buttons and nested submissions) and models in Rails.
